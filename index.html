@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilla Komali - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+// Random Profile Picture Rotation on Page Load
+document.addEventListener('DOMContentLoaded', function() {
+  const photos = document.querySelectorAll('.profile-photo');
+  const randomIndex = Math.floor(Math.random() * photos.length);
+  
+  // Remove active class from all
+  photos.forEach(photo => photo.classList.remove('active'));
+  
+  // Add active to random photo
+  photos[randomIndex].classList.add('active');
+  
+  // Optional: Auto-rotate every 8 seconds
+  setInterval(() => {
+    const currentActive = document.querySelector('.profile-photo.active');
+    const nextPhoto = currentActive.nextElementSibling || photos[0];
+    
+    currentActive.classList.remove('active');
+    nextPhoto.classList.add('active');
+  }, 8000);
+});
+</script>
+
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Pilla<span class="logo-accent">Komali</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li> 
+                <li><a href="#roadmap">Roadmap</a></li> 
+                <li><a href="#contact">Contact</a></li>
+                
+               
+
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+<!-- COMPLETE Hero Section with .hero-cta -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-primary">🚀 Full-Stack</span>
+          <span class="badge-secondary">5+ Projects Live</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Pilla Komali</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Crafting modern web experiences with React, Node.js & pixel-perfect design. 
+          Available for freelance, collaborations, and full-time opportunities.
+        </p>
+        
+        <!-- ✅ HERO CTA SECTION - NOW INCLUDED -->
+        <div class="hero-cta">
+          <div class="hero-buttons">
+            <!-- Explore Projects Button -->
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+            
+            <!-- Download Resume Button -->
+            <a href="#" class="btn btn-secondary" onclick="downloadAdvancedResume()">
+              <span>📄 Download Resume</span>
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span>Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">11</span>
+              <span>Certs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span>Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Profile Logo -->
+     <!-- Rotating Profile Pictures -->
+<div class="profile-image">
+  <div class="profile-pics">
+    <!-- ✅ PROFILE 1 - WORKING -->
+    <img src="https://drive.google.com/thumbnail?id=1UCvH-75MOeBT3K1q5ujbE8YuGtx7_pMZ&sz=w500" alt="Pilla Komali 1" class="profile-photo active">
+    
+    <!-- ✅ PROFILE 2 - WORKING -->
+    <img src="https://drive.google.com/thumbnail?id=17eEpIPIXzHocgcKV7OW9VJYS8SBC5MqW&sz=w500" alt="Pilla Komali 2" class="profile-photo">
+    
+    <!-- ✅ PROFILE 3 - WORKING -->
+    <img src="https://drive.google.com/thumbnail?id=1MqiwF4NiM5_-mMP-6AJgi_1Rwf644tle&sz=w500" alt="Pilla Komali 3" class="profile-photo">
+  </div>
+  <div class="profile-ring">
+    <div class="ring-glow"></div>
+  </div>
+</div>
+
+
+
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-hint">
+      <div class="mouse-scroll"></div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Advanced About Section -->
+<section id="about" class="about section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-main">
+                <div class="about-intro">
+                    <blockquote>
+                        "Turning ideas into interactive web experiences with clean code and modern design."
+                    </blockquote>
+                    <div class="quote-author">
+                        <span>Pilla Komali</span>
+                        <span class="role">Full-Stack Developer</span>
+                    </div>
+                </div>
+                
+                <p class="about-desc">
+                    I'm a passionate developer from Andhra Pradesh, India, specializing in modern web 
+                    technologies. I love building responsive UIs, scalable backends, and creating 
+                    seamless user experiences. Currently mastering React and exploring full-stack 
+                    development with Node.js.
+                </p>
+                
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <span class="highlight-icon">🎯</span>
+                        <h4>Frontend Specialist</h4>
+                        <p>React, JavaScript, CSS animations, responsive design</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-icon">🎨</span>
+                        <h4>UI/UX Designer</h4>
+                        <p>Figma prototypes, design systems, user-centered design</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-icon">⚡</span>
+                        <h4>Fast Learner</h4>
+                        <p>11 certifications, constant upskilling, latest tech trends</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-skills">
+                <h3 class="skills-title">Core Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 70%"></div>
+                            </div>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>ui/ux</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 60%"></div>
+                            </div>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-divider"></div>
+            <div class="projects-grid">
+                <!-- Student Task Manager -->
+                <article class="project-card featured">
+                    <div class="project-badge">🔥 Featured</div>
+                    <h3 class="project-title">Student Task Manager</h3>
+                    <p class="project-desc">Full-featured task management app with drag & drop, categories, priorities, and local storage.</p>
+                    <ul class="project-tags">
+                        <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Local Storage</li><li>Drag & Drop</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://pillakomali007.github.io/student-task-manager/" target="_blank" rel="noopener" class="link-demo">🚀 Live Demo</a>
+                        <a href="https://github.com/pillakomali007/student-task-manager" target="_blank" rel="noopener" class="link-code">📁 Source Code</a>
+                    </div>
+                </article>
+
+                <!-- Digital Grievance System -->
+                <article class="project-card">
+                    <h3 class="project-title">Digital Grievance System</h3>
+                    <p class="project-desc">Complete UI/UX design for grievance management with admin dashboard & user portal.</p>
+                    <ul class="project-tags">
+                        <li>Figma</li><li>UI/UX</li><li>Dashboard</li><li>Responsive</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/design/QetOKDp4IkkQRoLUEtImSz/Digital-Grievance-Redressal-System" target="_blank" rel="noopener" class="link-demo">🎨 Figma Design</a>
+                        <a href="#" target="_blank" rel="noopener" class="link-code">📁 Source Code</a>
+                    </div>
+                </article>
+
+                <!-- Web App Submodules -->
+                <article class="project-card">
+                    <h3 class="project-title">Web App Submodules</h3>
+                    <p class="project-desc">Modular web app design with interconnected submodules and consistent design system.</p>
+                    <ul class="project-tags">
+                        <li>Figma</li><li>Components</li><li>Design System</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/make/emGeDiQOKuauNu4qDup1ZE/Web-Application-with-Submodules" target="_blank" rel="noopener" class="link-demo">🎨 Figma Prototype</a>
+                        <a href="#" target="_blank" rel="noopener" class="link-code">📁 Source Code</a>
+                    </div>
+                </article>
+
+                <!-- Motivation Quotes -->
+                <article class="project-card">
+                    <h3 class="project-title">Motivation Quotes</h3>
+                    <p class="project-desc">Daily motivation quotes generator with animations and share functionality.</p>
+                    <ul class="project-tags">
+                        <li>HTML</li><li>CSS Animations</li><li>JavaScript</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pillakomali007/motivation_quotes" target="_blank" rel="noopener" class="link-code">📁 GitHub</a>
+                        <a href="#" target="_blank" rel="noopener" class="link-demo">🚀 Live Demo</a>
+                    </div>
+                </article>
+
+                <!-- Age Calculator -->
+                <article class="project-card">
+                    <h3 class="project-title">Age Calculator</h3>
+                    <p class="project-desc">Interactive age calculator with years, months, days computation and validation.</p>
+                    <ul class="project-tags">
+                        <li>JavaScript</li><li>Date Logic</li><li>Animations</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pillakomali007/age-calculator" target="_blank" rel="noopener" class="link-code">📁 GitHub</a>
+                        <a href="#" target="_blank" rel="noopener" class="link-demo">🚀 Live Demo</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+<section id="certifications" class="certifications section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Verified achievements from top platforms</p>
+        
+        <div class="certifications-grid">
+            <!-- Cert 1 -->
+            <div class="cert-card" data-cert="1">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Google%20Developer-blue?style=flat&logo=google-developer&logoColor=white" alt="Google Developer" class="cert-logo">
+                    <div class="cert-badge">🏆</div>
+                </div>
+                <h3 class="cert-title">Google Developer Certificate</h3>
+                <p class="cert-desc">Fundamentals of web development and modern frameworks</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1RU2fyy9TE-fO8xtd0xp0S0v76igx52N7/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-card featured" data-cert="2">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/HackerRank-Computer%20Science-green?style=flat&logo=hackerrank&logoColor=white" alt="HackerRank" class="cert-logo">
+                    <div class="cert-badge featured">⭐</div>
+                </div>
+                <h3 class="cert-title">HackerRank Computer Science</h3>
+                <p class="cert-desc">Problem solving, algorithms & data structures mastery</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1jvBMW4QeGcn9tqw9XmJHJPDPohoi9iUy/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-card" data-cert="3">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Coursera-orange?style=flat&logo=coursera&logoColor=white" alt="Coursera" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Web Development Bootcamp</h3>
+                <p class="cert-desc">Full-stack development with HTML, CSS, JavaScript & React</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1krZMhxy2do4FCHOR43_VIMpaVjMJQgsW/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="cert-card" data-cert="4">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Udemy-purple?style=flat&logo=udemy&logoColor=white" alt="Udemy" class="cert-logo">
+                </div>
+                <h3 class="cert-title">JavaScript Algorithms & Data Structures</h3>
+                <p class="cert-desc">Advanced JavaScript programming and problem-solving</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1_oQiIXAOaU3A9nI_cIjqSuDe3LcaIHn_/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="cert-card" data-cert="5">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/IBM%20SkillsBuild-blue?style=flat&logo=ibm&logoColor=white" alt="IBM" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Full Stack Software Developer</h3>
+                <p class="cert-desc">Professional full-stack development professional certificate</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1t2PttogPuxOyfDMegGUCSJ7BpoEA0Aki/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 6 -->
+            <div class="cert-card" data-cert="6">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Microsoft%20Learn-blue?style=flat&logo=microsoft&logoColor=white" alt="Microsoft" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Microsoft Azure Fundamentals</h3>
+                <p class="cert-desc">Cloud computing fundamentals and Azure services</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1NeMaAnCfVKuk5_G6oMt6jC--DEze9jxK/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 7 -->
+            <div class="cert-card" data-cert="7">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/AWS%20Certified-orange?style=flat&logo=aws&logoColor=white" alt="AWS" class="cert-logo">
+                </div>
+                <h3 class="cert-title">AWS Cloud Practitioner</h3>
+                <p class="cert-desc">Foundational AWS cloud computing certification</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1sJJzaBeSy7hrduo1r3kqI1Wd4MtLKmAG/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 8 -->
+            <div class="cert-card" data-cert="8">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/FreeCodeCamp-green?style=flat&logo=freecodecamp&logoColor=white" alt="freeCodeCamp" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Responsive Web Design</h3>
+                <p class="cert-desc">Responsive web design principles and modern CSS</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1EPgaaPsQIEzH5FHe8OUai0fkoeLq0c4r/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 9 -->
+            <div class="cert-card" data-cert="9">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Python%20Institute-orange?style=flat&logo=python&logoColor=white" alt="Python" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Python Programming Essentials</h3>
+                <p class="cert-desc">Core Python programming certification</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1clyo2gfCCBHhun0YWq1m3c9nkNgIyEgp/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 10 -->
+            <div class="cert-card" data-cert="10">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/GitHub-blue?style=flat&logo=github&logoColor=white" alt="GitHub" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Git & GitHub Mastery</h3>
+                <p class="cert-desc">Version control systems and collaborative development</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/1iUeGMBDudvjh0cSSZxHMLRav7EoEUW7s/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Cert 11 -->
+            <div class="cert-card" data-cert="11">
+                <div class="cert-header">
+                    <img src="https://img.shields.io/badge/Oracle-red?style=flat&logo=oracle&logoColor=white" alt="Oracle" class="cert-logo">
+                </div>
+                <h3 class="cert-title">Java Foundations</h3>
+                <p class="cert-desc">Oracle certified Java programming fundamentals</p>
+                <div class="cert-links">
+                    <a href="https://drive.google.com/file/d/104X6dHtVuvWOJAM7Itu65Q3XDglsEZKD/view?usp=drive_link" target="_blank" class="cert-link" rel="noopener">📄 View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Enhanced Simple Roadmap -->
+<section id="roadmap" class="roadmap section section-alt">
+    <div class="container">
+        <h2 class="section-title">My Roadmap</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Clear path from Junior to Full-Stack Developer</p>
+        
+        <div class="roadmap-container">
+            <div class="roadmap-timeline">
+                <!-- Step 1 -->
+                <div class="roadmap-item completed" data-step="1">
+                    <div class="roadmap-number">1</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Frontend Basics</h3>
+                        <div class="roadmap-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <p>Semantic HTML, Flexbox/Grid, DOM manipulation, responsive design</p>
+                        <div class="roadmap-status completed">✅ Completed</div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="roadmap-item active" data-step="2">
+                    <div class="roadmap-number">2</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Modern Tools</h3>
+                        <div class="roadmap-tags">
+                            <span>React Hooks</span>
+                            <span>Git/GitHub</span>
+                            <span>Figma</span>
+                            <span>APIs</span>
+                        </div>
+                        <p>React components, version control, UI/UX design, REST APIs</p>
+                        <div class="roadmap-status active">🔥 In Progress</div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="roadmap-item upcoming" data-step="3">
+                    <div class="roadmap-number">3</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Backend</h3>
+                        <div class="roadmap-tags">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <p>Server development, REST APIs, database design, authentication</p>
+                        <div class="roadmap-status upcoming">⏳ Next</div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="roadmap-item goal" data-step="4">
+                    <div class="roadmap-number">4</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Full-Stack Pro</h3>
+                        <div class="roadmap-tags">
+                            <span>Next.js</span>
+                            <span>Deployment</span>
+                            <span>Testing</span>
+                            <span>DevOps</span>
+                        </div>
+                        <p>Production apps, deployment, CI/CD, performance optimization</p>
+                        <div class="roadmap-status goal">🎯 Target 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <!-- Advanced Contact Section -->
+<section id="contact" class="contact section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Let's build something amazing together. I'm available for freelance projects, 
+                collaborations, and full-time opportunities.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Info Cards -->
+            <div class="contact-info">
+                <div class="info-card email">
+                    <div class="info-icon">📧</div>
+                    <h3>Send Email</h3>
+                    <p>Best way to reach me</p>
+                    <a href="mailto:komalipilla007@gmail.com" class="info-link">komalipilla007@gmail.com</a>
+                </div>
+                
+                <div class="info-card phone">
+                    <div class="info-icon">📱</div>
+                    <h3>Call / WhatsApp</h3>
+                    <p>Quick response</p>
+                    <a href="tel:+91 7989292435" class="info-link">+91-7989292435</a>
+                </div>
+                
+                <div class="info-card location">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Vizianagaram, Andhra Pradesh</p>
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6145!2d80.1234!3d16.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDM0JzAzLjIiTiA4MMKwMDcnMjQuMSJF!5e0!3m2!1sen!2sin!4v1699999999999" 
+                                width="100%" height="200" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="info-card social">
+                    <div class="info-icon">🌐</div>
+                    <h3>Follow Me</h3>
+                    <p>Connect on socials</p>
+                    <div class="social-links">
+                        <a href="https://github.com/pillakomali007" class="social-link github" aria-label="GitHub">GitHub</a>
+                        <a href="https://www.linkedin.com/in/komali-pilla-b50038320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link linkedin" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link dribbble" aria-label="Dribbble">Dribbble</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm" class="form-container">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX">
+                            <label for="phone">Phone (Optional)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="freelance">Freelance Project</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="fulltime">Full-Time Opportunity</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="service">What can I help you with?</label>
+                    </div>
+                    
+                    <div class="form-group full">
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-submit">
+                        <span>Send Message</span>
+                        <div class="btn-loader" style="display: none;"></div>
+                    </button>
+                </form>
+                
+                <div class="form-success" style="display: none;">
+                    <div class="success-icon">✅</div>
+                    <h3>Message Sent!</h3>
+                    <p>Thanks for reaching out! I'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
