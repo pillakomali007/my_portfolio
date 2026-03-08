@@ -257,12 +257,12 @@ function downloadAdvancedResume() {
                     <strong>7989292435</strong>
                 </div>
                 <div class="contact-item">
-                    <span style="font-size: 1.2rem;">💻</span>
+                    <span style="font-size: 1.2rem;">💻 LINKEDIN</span>
                     <strong>https://www.linkedin.com/in/komali-pilla-b50038320/</strong>
                 </div>
                 <div class="contact-item">
-                    <span style="font-size: 1.2rem;">🌐</span>
-                    <strong>yourportfolio.com</strong>
+                    <span style="font-size: 1.2rem;">🌐 PORTFOLIO</span>
+                    <strong>http://127.0.0.1:5500/index.html</strong>
                 </div>
                 <div class="contact-item">
                     <span style="font-size: 1.2rem;">📍</span>
